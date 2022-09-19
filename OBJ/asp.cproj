@@ -1,0 +1,300 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="14.0">
+  <PropertyGroup>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>7.0</ProjectVersion>
+    <ToolchainName>com.Atmel.AVRGCC8.C</ToolchainName>
+    <ProjectGuid>12f75bab-0247-4ad5-9b57-9ba05c592779</ProjectGuid>
+    <avrdevice>ATmega2560</avrdevice>
+    <avrdeviceseries>none</avrdeviceseries>
+    <OutputType>Executable</OutputType>
+    <Language>C</Language>
+    <OutputFileName>$(MSBuildProjectName)</OutputFileName>
+    <OutputFileExtension>.elf</OutputFileExtension>
+    <OutputDirectory>$(MSBuildProjectDirectory)\$(Configuration)</OutputDirectory>
+    <AssemblyName>asp</AssemblyName>
+    <Name>asp</Name>
+    <RootNamespace>asp</RootNamespace>
+    <ToolchainFlavour>Native</ToolchainFlavour>
+    <KeepTimersRunning>true</KeepTimersRunning>
+    <OverrideVtor>false</OverrideVtor>
+    <CacheFlash>true</CacheFlash>
+    <ProgFlashFromRam>true</ProgFlashFromRam>
+    <RamSnippetAddress>0x20000000</RamSnippetAddress>
+    <UncachedRange />
+    <preserveEEPROM>true</preserveEEPROM>
+    <OverrideVtorValue>exception_table</OverrideVtorValue>
+    <BootSegment>2</BootSegment>
+    <ResetRule>0</ResetRule>
+    <eraseonlaunchrule>0</eraseonlaunchrule>
+    <EraseKey />
+    <AsfFrameworkConfig>
+      <framework-data xmlns="">
+        <options />
+        <configurations />
+        <files />
+        <documentation help="" />
+        <offline-documentation help="" />
+        <dependencies>
+          <content-extension eid="atmel.asf" uuidref="Atmel.ASF" version="3.47.0" />
+        </dependencies>
+      </framework-data>
+    </AsfFrameworkConfig>
+    <avrtool>com.atmel.avrdbg.tool.atmelice</avrtool>
+    <avrtoolserialnumber>J41800113804</avrtoolserialnumber>
+    <avrdeviceexpectedsignature>0x1E9801</avrdeviceexpectedsignature>
+    <com_atmel_avrdbg_tool_atmelice>
+      <ToolOptions>
+        <InterfaceProperties>
+          <JtagDbgClock>400000</JtagDbgClock>
+          <IspClock>125000</IspClock>
+        </InterfaceProperties>
+        <InterfaceName>JTAG</InterfaceName>
+      </ToolOptions>
+      <ToolType>com.atmel.avrdbg.tool.atmelice</ToolType>
+      <ToolNumber>J41800113804</ToolNumber>
+      <ToolName>Atmel-ICE</ToolName>
+    </com_atmel_avrdbg_tool_atmelice>
+    <avrtoolinterface>JTAG</avrtoolinterface>
+    <avrtoolinterfaceclock>400000</avrtoolinterfaceclock>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <ToolchainSettings>
+      <AvrGcc>
+        <avrgcc.common.Device>-mmcu=atmega2560 -B "%24(PackRepoDir)\atmel\ATmega_DFP\1.3.300\gcc\dev\atmega2560"</avrgcc.common.Device>
+        <avrgcc.common.optimization.RelaxBranches>True</avrgcc.common.optimization.RelaxBranches>
+        <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
+        <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
+        <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
+        <avrgcc.common.outputfiles.srec>True</avrgcc.common.outputfiles.srec>
+        <avrgcc.common.outputfiles.usersignatures>False</avrgcc.common.outputfiles.usersignatures>
+        <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+        <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+        <avrgcc.compiler.symbols.DefSymbols>
+          <ListValues>
+            <Value>NDEBUG</Value>
+          </ListValues>
+        </avrgcc.compiler.symbols.DefSymbols>
+        <avrgcc.compiler.directories.IncludePaths>
+          <ListValues>
+            <Value>%24(PackRepoDir)\atmel\ATmega_DFP\1.3.300\include</Value>
+          </ListValues>
+        </avrgcc.compiler.directories.IncludePaths>
+        <avrgcc.compiler.optimization.level>Optimize for size (-Os)</avrgcc.compiler.optimization.level>
+        <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
+        <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
+        <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+        <avrgcc.linker.libraries.Libraries>
+          <ListValues>
+            <Value>libm</Value>
+          </ListValues>
+        </avrgcc.linker.libraries.Libraries>
+        <avrgcc.assembler.general.IncludePaths>
+          <ListValues>
+            <Value>%24(PackRepoDir)\atmel\ATmega_DFP\1.3.300\include</Value>
+          </ListValues>
+        </avrgcc.assembler.general.IncludePaths>
+      </AvrGcc>
+    </ToolchainSettings>
+    <UsesExternalMakeFile>True</UsesExternalMakeFile>
+    <OutputDirectory />
+    <ExternalMakeFilePath>Makefile</ExternalMakeFilePath>
+    <BuildTarget>all</BuildTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <ToolchainSettings>
+      <AvrGcc>
+        <avrgcc.common.Device>-mmcu=atmega2560 -B "%24(PackRepoDir)\atmel\ATmega_DFP\1.3.300\gcc\dev\atmega2560"</avrgcc.common.Device>
+        <avrgcc.common.optimization.RelaxBranches>True</avrgcc.common.optimization.RelaxBranches>
+        <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
+        <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
+        <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
+        <avrgcc.common.outputfiles.srec>True</avrgcc.common.outputfiles.srec>
+        <avrgcc.common.outputfiles.usersignatures>False</avrgcc.common.outputfiles.usersignatures>
+        <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+        <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+        <avrgcc.compiler.symbols.DefSymbols>
+          <ListValues>
+            <Value>DEBUG</Value>
+          </ListValues>
+        </avrgcc.compiler.symbols.DefSymbols>
+        <avrgcc.compiler.directories.IncludePaths>
+          <ListValues>
+            <Value>%24(PackRepoDir)\atmel\ATmega_DFP\1.3.300\include</Value>
+          </ListValues>
+        </avrgcc.compiler.directories.IncludePaths>
+        <avrgcc.compiler.optimization.level>Optimize (-O1)</avrgcc.compiler.optimization.level>
+        <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
+        <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
+        <avrgcc.compiler.optimization.DebugLevel>Default (-g2)</avrgcc.compiler.optimization.DebugLevel>
+        <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+        <avrgcc.linker.libraries.Libraries>
+          <ListValues>
+            <Value>libm</Value>
+          </ListValues>
+        </avrgcc.linker.libraries.Libraries>
+        <avrgcc.assembler.general.IncludePaths>
+          <ListValues>
+            <Value>%24(PackRepoDir)\atmel\ATmega_DFP\1.3.300\include</Value>
+          </ListValues>
+        </avrgcc.assembler.general.IncludePaths>
+        <avrgcc.assembler.debugging.DebugLevel>Default (-Wa,-g)</avrgcc.assembler.debugging.DebugLevel>
+      </AvrGcc>
+    </ToolchainSettings>
+    <UsesExternalMakeFile>True</UsesExternalMakeFile>
+    <OutputDirectory />
+    <ExternalMakeFilePath>Makefile</ExternalMakeFilePath>
+    <BuildTarget>all</BuildTarget>
+    <CleanTarget>realclean</CleanTarget>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+  <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
+  <ItemGroup>
+    <Compile Include="cfg1_out.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="..\arch\atmega_gcc\start.S">
+      <SubType>compile</SubType>
+      <Link>start.S</Link>
+    </Compile>
+    <Compile Include="kernel_cfg.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="sample1.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="..\library\log_output.c">
+      <SubType>compile</SubType>
+      <Link>log_output.c</Link>
+    </Compile>
+    <Compile Include="..\library\vasyslog.c">
+      <SubType>compile</SubType>
+      <Link>vasyslog.c</Link>
+    </Compile>
+    <Compile Include="..\library\t_perror.c">
+      <SubType>compile</SubType>
+      <Link>t_perror.c</Link>
+    </Compile>
+    <Compile Include="..\library\strerror.c">
+      <SubType>compile</SubType>
+      <Link>strerror.c</Link>
+    </Compile>
+    <Compile Include="..\target\arduino_mega2560_gcc\target_serial.c">
+      <SubType>compile</SubType>
+      <Link>target_serial.c</Link>
+    </Compile>
+    <Compile Include="..\syssvc\syslog.c">
+      <SubType>compile</SubType>
+      <Link>syslog.c</Link>
+    </Compile>
+    <Compile Include="..\syssvc\serial.c">
+      <SubType>compile</SubType>
+      <Link>serial.c</Link>
+    </Compile>
+    <Compile Include="..\syssvc\logtask.c">
+      <SubType>compile</SubType>
+      <Link>logtask.c</Link>
+    </Compile>
+    <Compile Include="..\arch\atmega_gcc\prc_support.S">
+      <SubType>compile</SubType>
+      <Link>prc_support.S</Link>
+    </Compile>
+    <Compile Include="..\target\arduino_mega2560_gcc\target_config.c">
+      <SubType>compile</SubType>
+      <Link>target_config.c</Link>
+    </Compile>
+    <Compile Include="..\target\arduino_mega2560_gcc\target_timer.c">
+      <SubType>compile</SubType>
+      <Link>target_timer.c</Link>
+    </Compile>
+    <Compile Include="..\arch\atmega_gcc\prc_config.c">
+      <SubType>compile</SubType>
+      <Link>prc_config.c</Link>
+    </Compile>
+    <Compile Include="..\kernel\startup.c">
+      <SubType>compile</SubType>
+      <Link>startup.c</Link>
+    </Compile>
+    <Compile Include="..\kernel\task.c">
+      <SubType>compile</SubType>
+      <Link>task.c</Link>
+    </Compile>
+    <Compile Include="..\kernel\wait.c">
+      <SubType>compile</SubType>
+      <Link>wait.c</Link>
+    </Compile>
+    <Compile Include="..\kernel\time_event.c">
+      <SubType>compile</SubType>
+      <Link>time_event.c</Link>
+    </Compile>
+    <Compile Include="..\kernel\task_manage.c">
+      <SubType>compile</SubType>
+      <Link>task_manage.c</Link>
+    </Compile>
+    <Compile Include="..\kernel\task_refer.c">
+      <SubType>compile</SubType>
+      <Link>task_refer.c</Link>
+    </Compile>
+    <Compile Include="..\kernel\task_sync.c">
+      <SubType>compile</SubType>
+      <Link>task_sync.c</Link>
+    </Compile>
+    <Compile Include="..\kernel\task_except.c">
+      <SubType>compile</SubType>
+      <Link>task_except.c</Link>
+    </Compile>
+    <Compile Include="..\kernel\semaphore.c">
+      <SubType>compile</SubType>
+      <Link>semaphore.c</Link>
+    </Compile>
+    <Compile Include="..\kernel\eventflag.c">
+      <SubType>compile</SubType>
+      <Link>eventflag.c</Link>
+    </Compile>
+    <Compile Include="..\kernel\dataqueue.c">
+      <SubType>compile</SubType>
+      <Link>dataqueue.c</Link>
+    </Compile>
+    <Compile Include="..\kernel\pridataq.c">
+      <SubType>compile</SubType>
+      <Link>pridataq.c</Link>
+    </Compile>
+    <Compile Include="..\kernel\mailbox.c">
+      <SubType>compile</SubType>
+      <Link>mailbox.c</Link>
+    </Compile>
+    <Compile Include="..\kernel\mempfix.c">
+      <SubType>compile</SubType>
+      <Link>mempfix.c</Link>
+    </Compile>
+    <Compile Include="..\kernel\time_manage.c">
+      <SubType>compile</SubType>
+      <Link>time_manage.c</Link>
+    </Compile>
+    <Compile Include="..\kernel\cyclic.c">
+      <SubType>compile</SubType>
+      <Link>cyclic.c</Link>
+    </Compile>
+    <Compile Include="..\kernel\alarm.c">
+      <SubType>compile</SubType>
+      <Link>alarm.c</Link>
+    </Compile>
+    <Compile Include="..\kernel\sys_manage.c">
+      <SubType>compile</SubType>
+      <Link>sys_manage.c</Link>
+    </Compile>
+    <Compile Include="..\kernel\interrupt.c">
+      <SubType>compile</SubType>
+      <Link>interrupt.c</Link>
+    </Compile>
+    <Compile Include="..\kernel\exception.c">
+      <SubType>compile</SubType>
+      <Link>exception.c</Link>
+    </Compile>
+    <Compile Include="..\syssvc\banner.c">
+      <SubType>compile</SubType>
+      <Link>banner.c</Link>
+    </Compile>
+  </ItemGroup>
+</Project>
