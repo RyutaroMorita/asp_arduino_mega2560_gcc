@@ -1,5 +1,5 @@
 /*
- *  @(#) $Id: m68kelf.ld 127 2007-06-19 07:23:10Z hiro $
+ *	2022/9/20 Ryutaro Morita
  */
 
 /* Default linker script, for normal executables */

@@ -67,8 +67,6 @@ typedef uint32_t	CLOCK;
 
 /*
  *  タイマ値の内部表現とミリ秒・μ秒単位との変換
- *
- *  DVE68K/40では，タイマは1μ秒毎にカウントアップする．
  */
 #define TIMER_CLOCK				250U
 #define TO_CLOCK(nume, deno)	((CLOCK)(TIMER_CLOCK * (nume) / (deno)))

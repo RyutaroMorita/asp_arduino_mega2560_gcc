@@ -52,11 +52,6 @@
 #define TOPPERS_TARGET_SYSSVC_H
 
 /*
- *  ターゲットシステムのハードウェア資源の定義
- */
-//#include "dve68k.h"
-
-/*
  *  トレースログに関する設定
  */
 #ifdef TOPPERS_ENABLE_TRACE

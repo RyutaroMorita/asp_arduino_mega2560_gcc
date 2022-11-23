@@ -1,5 +1,5 @@
 /*
- *  @(#) $Id: target_cfg1_out.h 2728 2015-12-30 01:46:11Z ertl-honda $
+ *	2022/9/20 Ryutaro Morita
  */
 
 /*

@@ -254,12 +254,6 @@ extern void	target_exit(void) NoReturn;
 #endif /* TOPPERS_MACRO_ONLY */
 
 /*
- *  微少時間待ちのための定義（本来はSILのターゲット依存部）
- */
-#define SIL_DLY_TIM1	420
-#define SIL_DLY_TIM2	90
-
-/*
  *  プロセッサ依存モジュール（M68040用）
  */
 #include "m68k_gcc/prc_config.h"

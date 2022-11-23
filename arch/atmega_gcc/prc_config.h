@@ -98,12 +98,7 @@ set_iipm(uint16_t iipm)
 
 /*
  *  コンテキストの参照
- *
- *  M68040では，タスクコンテキストをマスタモードで，非タスクコンテキス
- *  トを割込みモードで実行する．マスタモードか割込みモードかは，ステー
- *  タスレジスタ（SR）中の割込みモードビットにより判別できる．
  */
-extern volatile int		master_mode;
 extern volatile int		int_cnt;
 Inline bool_t
 sense_context(void)
@@ -117,11 +112,6 @@ sense_context(void)
  *  CPUロック状態での割込み優先度マスク
  *
  *  TIPM_LOCKは，カーネル管理の割込みをすべてマスクする値に定義する．
- *
- *  TIPM_LOCKは，基本的にはTMIN_INTPRIに一致させればよいが，M68040では，
- *  IPM（ハードウェアの割込み優先度マスク）が-6の場合と-7の場合の振舞い
- *  が同じで，IPMに-7を設定することは効率的に行えることから，
- *  TMIN_INTPRIが-6の時はTIPM_LOCKを-7にしている．
  */
 #if TMIN_INTPRI == -6		/* NMI以外にカーネル管理外の割込みを設けない */
 #define TIPM_LOCK		(-7)
